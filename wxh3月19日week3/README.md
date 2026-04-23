@@ -43,4 +43,7 @@
     *   `turtlesim` 노드를 실하여 로봇의 움직임을 시각화하였습니다.
     *   `geometry_msgs/Twist` 메시지를 발행하여 거북이를 직선으로 이동시켰습니다 (`linear.x=1.0`).
     *   거북이가 시뮬레이션 벽에 부딪히는 현상을 관찰하였으며, 콘솔에 `[WARN] ... Oh no! I hit the wall!` 경고 메시지가 출력되는 것을 통해 ROS 통신 및 시뮬레이션 제약 조건을 학습하였습니다.
+
+---
+
 <img src="img/wxh3月19日第三周作业.png" alt="ros2 小乌龟" width="500">
