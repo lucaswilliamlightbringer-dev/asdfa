@@ -2,7 +2,7 @@
 
 **姓名：** 王昕昊 (Wang Xinhao)
 **所属：** 信韩大学国际大学软件专业 (Shinhan University | International College | Software Major) 🇰🇷
-**课程：** AI 机器人学 (AI Robotics)
+**课程：** AI人工智能机器人 (AI Robotics)
 
 ---
 
