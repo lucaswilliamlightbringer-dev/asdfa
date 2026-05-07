@@ -58,5 +58,5 @@ PyBullet 시뮬레이션:
 
 ---
 
-<img src="img/wxh3月26日第四周作业小乌龟.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh3月26日第四周作业机械狗.png" alt="ros2 小乌龟" width="500">
+<img src="img/wxh3月26日第四周作业小乌龟.png" alt="ros2 四足机器人物理仿真环境搭建 以及 机器人关节碰撞属性配置 的测试" width="500">
+<img src="img/wxh3月26日第四周作业机械狗.png" alt="ros2 四足机器人物理仿真环境搭建 以及 机器人关节碰撞属性配置 的测试" width="500">

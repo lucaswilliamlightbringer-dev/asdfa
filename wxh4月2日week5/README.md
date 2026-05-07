@@ -57,4 +57,4 @@ Activity:
 
 ---
 
-<img src="img/wxh4月2日第五周作业.png" alt="ros2 小乌龟" width="500">
+<img src="img/wxh4月2日第五周作业.png" alt="ros2 机器人物理仿真 以及 逆运动学 (IK) 控制代码 的调试" width="500">

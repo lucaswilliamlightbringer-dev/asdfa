@@ -55,10 +55,10 @@ Activity:
 
 ---
 
-<img src="img/wxh第六周作业01.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业02.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业03.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业04.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业05.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业06.png" alt="ros2 小乌龟" width="500">
-<img src="img/wxh第六周作业07.png" alt="ros2 小乌龟" width="500">
+<img src="img/wxh第六周作业01.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业02.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业03.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业04.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业05.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业06.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">
+<img src="img/wxh第六周作业07.png" alt="ros2 自动驾驶数据集 在 ROS 2 环境 下的可视化与多传感器数据融合测试" width="500">

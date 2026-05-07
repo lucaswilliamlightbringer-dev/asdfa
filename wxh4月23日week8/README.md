@@ -39,24 +39,24 @@ Name: Wang Xinhao
 
 Activity:
 
-Docker + ROS2 Environment:
-Launched a ROS2 desktop container using Docker with VNC support.
-Accessed the container GUI via browser (noVNC) at localhost:6080.
-Verified that VNC and noVNC services were running successfully.
+1. Docker + ROS2 Environment:
+  Launched a ROS2 desktop container using Docker with VNC support.
+  Accessed the container GUI via browser (noVNC) at localhost:6080.
+  Verified that VNC and noVNC services were running successfully.
 
-ROS2 Simulation (TurtleSim):
-Executed `ros2 run turtlesim turtlesim_node` to start the simulation node.
-Confirmed the TurtleSim GUI window appeared with a turtle in the center.
-Checked initialization logs including turtle spawn position.
+2. ROS2 Simulation (TurtleSim):
+  Executed `ros2 run turtlesim turtlesim_node` to start the simulation node.
+  Confirmed the TurtleSim GUI window appeared with a turtle in the center.
+  Checked initialization logs including turtle spawn position.
 
-Keyboard Control (Teleop):
-Ran `ros2 run turtlesim turtle_teleop_key` to enable keyboard control.
-Used arrow keys to move the turtle and rotation keys to change orientation.
-Successfully drew trajectories in the simulator, confirming correct topic communication.
+3. Keyboard Control (Teleop):
+   Ran `ros2 run turtlesim turtle_teleop_key` to enable keyboard control.
+   Used arrow keys to move the turtle and rotation keys to change orientation.
+   Successfully drew trajectories in the simulator, confirming correct topic communication.
 
-Docker Management:
-Monitored container status and resource usage via Docker Desktop.
-Ensured stable execution and proper port mapping for GUI access.
+4. Docker Management:
+   Monitored container status and resource usage via Docker Desktop.
+   Ensured stable execution and proper port mapping for GUI access.
 
 ---
 
@@ -66,23 +66,23 @@ Ensured stable execution and proper port mapping for GUI access.
 
 활동 내용:
 
-Docker 및 ROS2 환경:
-Docker를 사용하여 ROS2 Desktop 컨테이너를 실행하였으며 VNC 기반 GUI 환경을 구성하였습니다.
-브라우저(127.0.0.1:6080)를 통해 컨테이너 내부 Ubuntu 데스크탑에 접속하였습니다.
-VNC 및 noVNC 서비스가 정상적으로 실행됨을 확인하였습니다.
+1. Docker 및 ROS2 환경:
+   Docker를 사용하여 ROS2 Desktop 컨테이너를 실행하였으며 VNC 기반 GUI 환경을 구성하였습니다.
+   브라우저(127.0.0.1:6080)를 통해 컨테이너 내부 Ubuntu 데스크탑에 접속하였습니다.
+   VNC 및 noVNC 서비스가 정상적으로 실행됨을 확인하였습니다.
 
-TurtleSim 시뮬레이션:
-`ros2 run turtlesim turtlesim_node` 명령어로 시뮬레이션을 실행하였습니다.
-TurtleSim GUI 창이 정상적으로 표시되고 중앙에 거북이가 생성됨을 확인하였습니다.
+2. TurtleSim 시뮬레이션:
+   `ros2 run turtlesim turtlesim_node` 명령어로 시뮬레이션을 실행하였습니다.
+   TurtleSim GUI 창이 정상적으로 표시되고 중앙에 거북이가 생성됨을 확인하였습니다.
 
-키보드 제어 (추가):
-`ros2 run turtlesim turtle_teleop_key` 명령어로 키보드 제어 노드를 실행하였습니다.
-방향키를 사용하여 거북이를 이동시키고 다양한 궤적을 생성하였습니다.
-이를 통해 ROS2 노드 간 통신이 정상적으로 이루어짐을 확인하였습니다.
+3. 키보드 제어 (추가):
+   `ros2 run turtlesim turtle_teleop_key` 명령어로 키보드 제어 노드를 실행하였습니다.
+   방향키를 사용하여 거북이를 이동시키고 다양한 궤적을 생성하였습니다.
+   이를 통해 ROS2 노드 간 통신이 정상적으로 이루어짐을 확인하였습니다.
 
-개발 환경:
-Docker Desktop을 통해 컨테이너 상태 및 자원 사용량을 모니터링하였습니다.
-컨테이너 기반 ROS2 개발 환경이 안정적으로 동작함을 확인하였습니다.
+4. 개발 환경:
+   Docker Desktop을 통해 컨테이너 상태 및 자원 사용량을 모니터링하였습니다.
+   컨테이너 기반 ROS2 개발 환경이 안정적으로 동작함을 확인하였습니다.
 
 ---
 
