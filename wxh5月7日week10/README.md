@@ -71,3 +71,4 @@ Activity:
 <img src="img/image.png" alt="ros2 图片" width="500">
 <img src="img/图片有色彩.png" alt="ros2 色彩图片" width="500">
 <img src="img/图片灰白.png" alt="ros2 灰白图片" width="500">
+<img src="img/wxh docker.png" alt="ros2 docker" width="500">
