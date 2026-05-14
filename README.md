@@ -16,6 +16,7 @@
 - [Week 7：Markdown 与 GitHub 作业整理](wxh4月16日week7/)
 - [Week 8：Docker 安装与 ROS2 桌面容器](wxh4月23日week8/)
 - [Week 10：Docker 概念与 OpenCV 实验](wxh5月7日week10/)
+- [Week 11：Docker镜像实验](wxh5月14日week11/)
 
 ## 关于我
 
