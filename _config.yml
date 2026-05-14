@@ -1,0 +1,11 @@
+# 网站标题
+title: 我的机器人课程作业
+
+# 网站描述
+description: AI Robotics 课程作业整理
+
+# GitHub Pages 主题
+theme: jekyll-theme-cayman
+
+# 是否显示下载按钮
+show_downloads: false
