@@ -17,7 +17,7 @@
 - [Week 8：Docker 安装与 ROS2 桌面容器](wxh4月23日week8/)
 - [Week 10：Docker 概念与 OpenCV 实验](wxh5月7日week10/)
 - [Week 11：Docker镜像实验](wxh5月14日week11/)
-- [Week 12：机器狗跑起来](wxh5月21日week12/)
+- [Week 12：四足机器人步态规划与仿真验证](wxh5月21日week12/)
 
 ## 关于我
 
