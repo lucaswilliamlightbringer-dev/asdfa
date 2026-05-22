@@ -198,3 +198,4 @@ ROS2 기반 개발 환경이 안정적으로 실행됨을 확인하였다.
 ---
 
 <video src="img/robot_dog.mp4" controls></video>
+<img src="img/机器狗仿真训练.png" alt="course report" width="700">
