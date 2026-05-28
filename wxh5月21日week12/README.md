@@ -1,199 +1,231 @@
-# 📝 课程作业记录与进度汇报
+# 📝 AI Robotics 实验进度报告
 
-姓名：王昕昊 (Wang Xinhao)
-所属：信韩大学国际大学软件专业 (Shinhan University | International College | Software Major) 🇰🇷
-课程：AI人工智能机器人 (AI Robotics)
-日期：2026年5月22日
-
----
-
-# 🇨🇳 本次操作叙述 (Description of Activities)
-
-本次实验主要完成了 Docker 容器环境下的 ROS2 图形化仿真部署，并进一步实现了 TurtleSim 小乌龟的键盘控制与交互测试。通过 Docker Desktop、noVNC、ROS2 以及 TurtleSim 的结合，成功验证了 ROS2 节点通信与容器化图形环境的运行效果。
+姓名：王昕昊（Wang Xinhao）
+学校：信韩大学 国际学院 软件专业（Shinhan University · International College · Software Engineering）🇰🇷
+课程名称：Artificial Intelligence Robotics
+实验日期：2026年5月28日
 
 ---
 
-## 1. Docker + ROS2 图形化环境搭建
+# 🇨🇳 实验内容说明（Experiment Overview）
 
-### 实验内容
+本次课程实践主要围绕 PyBullet 机器人仿真平台展开，重点完成了四足机器人运动控制程序的调试与运行。通过 VS Code 在 WSL Ubuntu 环境中编写 Python 控制代码，并结合 PyBullet GUI 完成机器人运动仿真与可视化测试。
 
-本次首先在 Windows PowerShell 中启动 ROS2 Desktop Docker 容器，并开启基于 VNC 的图形界面服务。
+实验过程中成功实现：
 
-执行命令：
+* Python 仿真程序运行
+* 四足机器人模型加载
+* PyBullet 图形界面启动
+* 机器人步态参数调节
+* 仿真摄像头数据显示
+* Linux + VS Code 联合开发环境测试
 
-```bash
-docker run -p 6080:80 --security-opt seccomp=unconfined --shm-size=512m ghcr.io/tiryoh/ros2-desktop-vnc:humble
+整个实验验证了 Python 机器人控制逻辑与物理仿真系统之间的协同运行能力。
+
+---
+
+# 1. Ubuntu + VS Code 开发环境配置
+
+## 实验过程
+
+本次实验首先在 Windows 系统下启动 WSL Ubuntu 24.04 环境，并通过 VS Code Remote 功能连接 Linux 工作目录。
+
+在 VS Code 中打开 `pybullet_robots` 项目后，对机器人控制脚本进行了编辑与调试，包括：
+
+* 四足机器人类定义
+* 电机关节参数
+* 步态控制逻辑
+* PID 高度控制参数
+* 行走频率与摆动参数
+
+Python 文件中对机器人腿部进行了分组控制，包括：
+
+```python
+'FR' : [0,1,2]
+'FL' : [4,5,6]
+'RR' : [8,9,10]
+'RL' : [12,13,14]
 ```
 
-成功启动 Ubuntu Jammy ROS2 Desktop 环境，并完成端口映射。
+同时设置机器人默认站立姿态与步态运动周期。
 
-随后通过浏览器访问：
+## 实验结果
+
+* 成功连接 WSL Ubuntu 开发环境
+* VS Code 可以直接编辑 Linux 项目文件
+* Python 程序能够正常保存与运行
+* 机器人运动参数配置完成
+
+---
+
+# 2. PyBullet 四足机器人仿真运行
+
+## 实验过程
+
+在 Ubuntu 终端中执行：
+
+```bash
+python3 laikago.py
+```
+
+启动 PyBullet 四足机器人仿真程序。
+
+程序运行后，系统自动加载：
+
+* PyBullet Physics Engine
+* OpenGL 图形界面
+* 四足机器人模型
+* 地面与障碍平台
+
+右侧窗口中显示机器人模型位于彩色平台区域，同时左侧显示：
+
+* RGB Camera Data
+* Depth Data
+* Segmentation Mask
+
+用于模拟机器人视觉传感器数据。
+
+终端输出：
 
 ```text
-127.0.0.1:6080
+MotionThreadFunc thread started
 ```
 
-进入 noVNC 提供的 Ubuntu 图形桌面，实现 Docker 容器内桌面的可视化操作。
+表明机器人运动线程已经启动。
 
-### 实验结果
+## 实验结果
 
-* 成功进入 Ubuntu 图形桌面
-* noVNC 与 VNC 服务均显示 RUNNING 状态
-* Docker Desktop 中成功显示运行中的 ROS2 容器
-* 浏览器可正常访问远程桌面
+* PyBullet GUI 成功打开
+* 四足机器人模型正常加载
+* 摄像头模拟数据正常显示
+* 机器人运动线程运行稳定
+* 地面物理碰撞检测正常
 
 ---
 
-## 2. ROS2 TurtleSim 仿真运行
+# 3. 四足机器人运动控制测试
 
-### 实验内容
+## 实验过程
 
-进入 Docker 容器终端后，执行以下命令启动 TurtleSim：
+本次实验对机器人步态算法进行了测试。
 
-```bash
-ros2 run turtlesim turtlesim_node
+程序中通过：
+
+* 相位控制（Phase Offset）
+* 正弦函数运动生成
+* 摆动腿与支撑腿切换
+* PID 高度稳定控制
+
+实现机器人周期性行走控制。
+
+代码中通过：
+
+```python
+phase = 2 * np.pi * self.gait_freq * t
 ```
 
-系统成功弹出 TurtleSim 仿真窗口，显示蓝色背景及位于中央的小乌龟。
+计算步态周期，并依据不同腿部进行同步或反向控制。
 
-终端中同时输出 TurtleSim 初始化日志，包括小乌龟生成坐标与节点启动信息。
+同时设置：
 
-### 实验结果
+```python
+self.step_height = 0.08
+self.forward_speed = 0.4
+```
 
-* TurtleSim 图形界面成功启动
-* ROS2 图形节点运行正常
-* 小乌龟生成位置初始化成功
-* 容器内图形程序运行稳定
+用于调节机器人前进速度与抬腿高度。
+
+## 实验结果
+
+* 四足机器人能够完成连续运动
+* 步态切换逻辑运行正常
+* 机器人保持基本稳定状态
+* 参数调节能够影响运动效果
+* 成功验证机器人运动控制算法
 
 ---
 
-## 3. TurtleSim 键盘控制（Teleop）
+# 4. 图形化仿真与实时观察
 
-### 实验内容
+## 实验过程
 
-在新的终端窗口中运行：
+实验过程中使用 PyBullet 自带 OpenGL GUI 对机器人运动状态进行实时观察。
 
-```bash
-ros2 run turtlesim turtle_teleop_key
-```
+仿真界面中可以查看：
 
-启动 TurtleSim 键盘控制节点。
+* 机器人姿态变化
+* 摄像头视角
+* 深度图像
+* 地面碰撞情况
+* 平台障碍结构
 
-通过键盘方向键（↑ ↓ ← →）控制小乌龟移动，并使用其他旋转控制键调整运动方向。
+同时能够通过鼠标旋转视角，对机器人运动过程进行动态分析。
 
-在控制过程中，小乌龟成功绘制出连续运动轨迹，说明速度控制话题 `/cmd_vel` 已被正确发布与接收。
+## 实验结果
 
-终端显示：
-
-```text
-Reading from keyboard
-```
-
-表明 teleop 节点已经进入实时监听状态。
-
-### 实验结果
-
-* 成功实现键盘控制
-* 小乌龟能够自由移动与旋转
-* TurtleSim 中成功生成运动轨迹
-* 验证 ROS2 Topic 通信机制正常工作
-
----
-
-## 4. Docker Desktop 管理与监控
-
-### 实验内容
-
-通过 Docker Desktop 对容器运行状态进行监控。
-
-界面中能够查看：
-
-* 容器运行状态
-* 镜像信息
-* 端口映射情况
-* CPU 与内存资源占用
-
-同时完成 Docker 镜像 commit 操作，用于保存当前实验环境。
-
-### 实验结果
-
-* Docker 容器运行稳定
-* ROS2 图形环境可持续运行
-* 镜像保存成功
-* 开发环境具备良好的可复现性
+* 图形界面运行流畅
+* 摄像头数据实时更新
+* 机器人运动轨迹清晰
+* 视觉仿真效果稳定
+* OpenGL 渲染正常工作
 
 ---
 
 # 🇺🇸 English Summary
 
-## Docker + ROS2 Environment
+## Linux + VS Code Development
 
-A ROS2 Desktop container with VNC support was launched using Docker.
-The Ubuntu graphical desktop was accessed through noVNC via browser at localhost:6080.
-Both VNC and noVNC services were verified to be running correctly.
+The experiment was conducted in a WSL Ubuntu environment using VS Code Remote Development.
+Python scripts for quadruped robot control were edited and tested successfully.
 
-## TurtleSim Simulation
+## PyBullet Robot Simulation
 
-The command below was executed:
-
-```bash
-ros2 run turtlesim turtlesim_node
-```
-
-The TurtleSim GUI window launched successfully with a turtle displayed in the center.
-Initialization logs confirmed successful ROS2 node startup.
-
-## Keyboard Control (Teleop)
-
-The teleoperation node was launched using:
+The following command was executed:
 
 ```bash
-ros2 run turtlesim turtle_teleop_key
+python3 laikago.py
 ```
 
-Arrow keys were used to control the turtle movement and generate trajectories inside the simulator.
-This verified successful ROS2 topic communication.
+The PyBullet simulator launched successfully with a quadruped robot model and OpenGL GUI interface.
+RGB, depth, and segmentation camera data were displayed correctly.
 
-## Docker Management
+## Robot Motion Control
 
-Docker Desktop was used to monitor container status, resource usage, and port mappings.
-The ROS2 container environment operated stably throughout the experiment.
+A gait control algorithm based on sinusoidal phase motion and PID stabilization was implemented.
+The robot performed continuous walking movements with adjustable speed and step height parameters.
+
+## Visualization and Monitoring
+
+The PyBullet graphical interface allowed real-time observation of robot posture, collision behavior, and simulated camera outputs.
+The physics simulation operated stably during the entire experiment.
 
 ---
 
 # 🇰🇷 한국어 요약
 
-## Docker 및 ROS2 환경 구성
+## Ubuntu 및 VS Code 개발 환경
 
-Docker를 사용하여 ROS2 Desktop 컨테이너를 실행하고 noVNC 기반 GUI 환경을 구축하였다.
-브라우저(127.0.0.1:6080)를 통해 Ubuntu 데스크탑 환경에 접속하였다.
-VNC 및 noVNC 서비스가 정상적으로 실행됨을 확인하였다.
+WSL Ubuntu 환경에서 VS Code Remote 기능을 사용하여 로봇 제어 코드를 수정하고 실행하였다.
+Python 기반 4족 보행 로봇 제어 프로그램이 정상적으로 동작하였다.
 
-## TurtleSim 시뮬레이션
+## PyBullet 로봇 시뮬레이션
 
-다음 명령어를 실행하여 TurtleSim을 구동하였다.
-
-```bash
-ros2 run turtlesim turtlesim_node
-```
-
-파란 배경의 TurtleSim GUI 창이 정상적으로 실행되었으며 중앙에 거북이가 생성되었다.
-
-## 키보드 제어 (Teleop)
-
-다음 명령어를 통해 키보드 제어 노드를 실행하였다.
+다음 명령어를 실행하였다.
 
 ```bash
-ros2 run turtlesim turtle_teleop_key
+python3 laikago.py
 ```
 
-방향키를 이용하여 거북이를 이동시키고 다양한 이동 궤적을 생성하였다.
-이를 통해 ROS2 노드 간 Topic 통신이 정상적으로 동작함을 확인하였다.
+PyBullet GUI 창이 정상적으로 실행되었으며 4족 로봇 모델과 OpenGL 기반 시뮬레이션 화면이 표시되었다.
 
-## Docker 관리
+## 보행 제어 테스트
 
-Docker Desktop을 통해 컨테이너 상태 및 자원 사용량을 모니터링하였다.
-ROS2 기반 개발 환경이 안정적으로 실행됨을 확인하였다.
+PID 제어와 위상 기반 보행 알고리즘을 사용하여 로봇의 이동 동작을 구현하였다.
+보행 속도와 다리 움직임 파라미터를 조절하면서 다양한 움직임을 테스트하였다.
+
+## 그래픽 시각화
+
+RGB 카메라, Depth 데이터, Segmentation Mask가 정상적으로 출력되었으며 물리 시뮬레이션 환경이 안정적으로 유지되었다.
 
 ---
 
