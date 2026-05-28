@@ -211,44 +211,6 @@ Week 1~13 과정이 정상적으로 웹 페이지에 표시되었으며 온라�
 
 ---
 
-# 📸 实验过程截图说明
-
-## 图 1：Docker 环境与 Python 库安装
-
-<img src="img/docker环境安装opencv.png" alt="docker opencv 安装" width="700">
-
-说明：
-在 Docker ROS2 容器中使用 pip 安装 `pybullet`、`opencv-python`、`opencv-contrib-python` 与 `numpy` 等实验依赖库，完成 AI 视觉与机器人仿真环境配置。
-
----
-
-## 图 2：Docker Desktop 与 ROS2 容器启动
-
-<img src="img/docker启动ros2桌面.png" alt="docker ros2 desktop" width="700">
-
-说明：
-Docker Desktop 中成功运行 ROS2 Desktop 容器，终端输出 VNC 与 noVNC 服务启动日志，并完成 6080 端口映射。
-
----
-
-## 图 3：GitHub Pages 课程主页部署结果
-
-<img src="img/github-pages-首页.png" alt="github pages" width="700">
-
-说明：
-AI Robotics 课程实验网站成功部署至 GitHub Pages，课程目录与实验记录均能够正常访问。
-
----
-
-## 图 4：Docker 容器中的 TurtleSim 仿真
-
-<img src="img/docker-turtlesim-运行.png" alt="docker turtlesim" width="700">
-
-说明：
-在 Docker 容器内部成功运行 TurtleSim 图形仿真程序，并通过 ROS2 Teleop 节点完成键盘控制测试。
-
----
-
 ## 图 5：课程实验页面与内容展示
 
 <img src="img/启动.png" alt="course report" width="700">
