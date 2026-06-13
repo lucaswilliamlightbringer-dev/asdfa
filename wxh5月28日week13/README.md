@@ -1,4 +1,5 @@
-# 📝 Week 12 实验记录与阶段性成果汇报
+# 📝 Week 12 基于Tailscale与Flask的手机端ArUco标记实时识别系统实验
+
 
 姓名：王昕昊（Wang Xinhao）
 学校：Shinhan University 国际学院 软件专业 🇰🇷
@@ -280,8 +281,8 @@ OpenCV ArUco 모듈을 사용하여 마커 인식 실험을 수행하였다.
 
 ---
 
-<img src="img/手机摄像头、ArUco识别与距离测量01.png" alt="camera bridge" width="700">
+<img src="img/手机摄像头ArUco识别与距离测量01.png" alt="camera bridge" width="700">
 
-<img src="img/手机摄像头、ArUco识别与距离测量02.jpg" alt="aruco detection" width="700">
+<img src="img/手机摄像头、ArUco 识别与距离测量02.jpg" alt="aruco detection" width="700">
 
-<img src="img/手机摄像头、ArUco识别与距离测量03.png" alt="tailscale network" width="700">
+<img src="img/手机摄像头、ArUco 识别与距离测量03.png" alt="tailscale network" width="700">
