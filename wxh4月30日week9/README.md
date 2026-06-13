@@ -279,8 +279,8 @@ Dictionary 자료구조 활용 능력을 향상시킬 수 있었다.
 
 ---
 
-<img src="img/data_analysis.png" alt="data analysis" width="700">
+<img src="img/data_analysis_search01.png" alt="data analysis" width="700">
 
-<img src="img/binary_search.png" alt="binary search" width="700">
+<img src="img/data_analysis_search02.png" alt="binary search" width="700">
 
-<img src="img/character_frequency.png" alt="character frequency" width="700">
+
