@@ -19,6 +19,8 @@
 - [Week 11：Docker镜像实验](wxh5月14日week11/)
 - [Week 12：四足机器人步态规划与仿真验证](wxh5月21日week12/)
 - [Week 13：基于Tailscale与Flask的手机端ArUco标记实时识别系统实验](wxh5月28日week13/)
+- [Week 14：基于 Tailscale 与 Web 端的四足机器人/Turtlesim 远程仿真控制系统](wxh6月4日week14/)
+
 
 
 ## 关于我
