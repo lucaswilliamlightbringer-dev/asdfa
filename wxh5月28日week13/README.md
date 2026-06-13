@@ -2,7 +2,7 @@
 
 
 姓名：王昕昊（Wang Xinhao）
-学校：Shinhan University 国际学院 软件专业 🇰🇷
+学校：Shinhan University 国际学院 软件工程专业
 课程名称：AI Robotics & Vision System
 实验日期：2026年5月28日
 
