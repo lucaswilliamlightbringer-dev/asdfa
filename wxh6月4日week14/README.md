@@ -1,9 +1,9 @@
 # 📝 Week 14 ROS2 Turtlesim Web迷宫控制系统实验
 
-姓名：王昕昊（Wang Xinhao）
-学校：Shinhan University 国际学院 软件工程专业
-课程名称：AI Robotics & Vision System
-实验日期：2026年6月17日
+**姓名**：王昕昊（Wang Xinhao）  
+**学校**：Shinhan University 国际学院 软件工程专业  
+**课程名称**：AI Robotics & Vision System  
+**实验日期**：2026年6月17日  
 
 ---
 
@@ -13,7 +13,7 @@
 
 实验基于 ROS2 Python 节点开发，通过发布 Twist 速度消息控制 Turtlesim 小乌龟运动，并结合 WebSocket 服务实现浏览器与 ROS2 节点之间的数据通信。
 
-在网页端设计了可视化迷宫控制界面，用户可以通过方向按钮或键盘控制小乌龟移动，在迷宫中完成路径探索。同时系统能够实时显示当前位置、运动状态、连接状态以及运行日志，实现完整的人机交互控制流程。
+在网页端设计了可视化迷宫控制界面，用户可以通过**网页按钮**控制小乌龟移动，在迷宫中完成路径探索。同时系统能够实时显示当前位置、运动状态、连接状态以及运行日志，实现完整的人机交互控制流程。
 
 整个实验过程同时涉及：
 
@@ -46,9 +46,9 @@ mkdir week14
 
 ```text
 turtlesim_web_bridge.py
+maze.py
 index.html
-style.css
-script.js
+img/网页按钮控制小乌龟走出迷宫.png
 ```
 
 整个开发过程均在 Ubuntu WSL 环境中完成。
@@ -172,14 +172,14 @@ json.loads(message)
 
 网页主要包括：
 
-* 方向控制按钮
+* **方向控制按钮**
 * 停止按钮
 * 实时状态信息
 * WebSocket连接状态
 * 迷宫地图
 * 系统运行日志
 
-用户可以通过：
+用户可以通过点击网页上的**按钮**：
 
 * ↑ 前进
 * ↓ 后退
@@ -211,8 +211,7 @@ MOVE
 ## 实验结果
 
 * 网页正常加载
-* 控制按钮正常工作
-* 键盘控制正常
+* **网页按钮**工作正常
 * 浏览器实时刷新状态
 * 小乌龟能够完成迷宫运动
 
@@ -340,7 +339,7 @@ A WebSocket server was deployed to establish communication between the browser a
 
 ## Maze Web Interface
 
-A browser-based control panel was developed with directional buttons, keyboard support, real-time status monitoring, connection status, and system logs.
+A browser-based control panel was developed with **directional buttons**, real-time status monitoring, connection status, and system logs.
 
 ## Maze Navigation
 
@@ -354,7 +353,7 @@ The experiment successfully verified:
 * ROS2 Node communication
 * Turtlesim motion control
 * WebSocket networking
-* Browser remote control
+* **Web button remote control**
 * Maze navigation
 * Automatic collision avoidance
 * Real-time robot monitoring
@@ -377,7 +376,7 @@ WebSocket 서버를 구축하여 웹 브라우저와 ROS2 노드 간의 실시�
 
 ## 웹 제어 인터페이스
 
-방향 버튼, 키보드 제어, 실시간 상태 정보, 연결 상태 및 시스템 로그를 포함한 웹 인터페이스를 구현하였다.
+**방향 버튼**, 실시간 상태 정보, 연결 상태 및 시스템 로그를 포함한 웹 인터페이스를 구현하였다.
 
 ## 미로 탐색
 
@@ -390,11 +389,11 @@ WebSocket 서버를 구축하여 웹 브라우저와 ROS2 노드 간의 실시�
 * ROS2 노드 통신
 * Turtlesim 제어
 * WebSocket 기반 원격 제어
-* 브라우저 실시간 제어
+* **웹 버튼 실시간 제어**
 * 미로 탐색
 * 자동 충돌 회피
 * 실시간 상태 모니터링
 
 ---
 
-<img src="img/键盘控制小乌龟走迷宫.png" alt="ROS2 Web Bridge Code" width="700">
+<img src="img/网页按钮控制小乌龟走出迷宫.png" alt="ROS2 Web Bridge Control" width="700">
