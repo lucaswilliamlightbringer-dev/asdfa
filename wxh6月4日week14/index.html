@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROS2 Turtlesim 迷宫控制台</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 左侧控制面板 -->
+    <aside class="sidebar">
+
+        <h1>🐢 ROS2 Turtlesim 迷宫控制台</h1>
+
+        <p class="subtitle">
+            使用方向键或按钮控制小乌龟走出迷宫，到达绿色终点。
+        </p>
+
+        <!-- 控制按钮 -->
+        <div class="panel">
+
+            <h2>控制面板</h2>
+
+            <div class="controls">
+
+                <button id="forward" class="btn blue">↑</button>
+
+                <div class="middle">
+
+                    <button id="left" class="btn blue">←</button>
+
+                    <button id="stop" class="btn red">■</button>
+
+                    <button id="right" class="btn blue">→</button>
+
+                </div>
+
+                <button id="backward" class="btn blue">↓</button>
+
+            </div>
+
+            <p class="tip">
+                键盘控制：
+                ↑ ↓ ← →　
+                空格停止
+            </p>
+
+        </div>
+
+        <!-- 实时状态 -->
+
+        <div class="panel">
+
+            <h2>实时状态</h2>
+
+            <table>
+
+                <tr>
+                    <td>x</td>
+                    <td id="x">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>y</td>
+                    <td id="y">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>theta</td>
+                    <td id="theta">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>线速度</td>
+                    <td id="linear">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>角速度</td>
+                    <td id="angular">0.00</td>
+                </tr>
+
+                <tr>
+                    <td>状态</td>
+                    <td id="state">MOVE</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- WebSocket -->
+
+        <div class="panel">
+
+            <h2>连接状态</h2>
+
+            <span class="status" id="status">
+
+                ● 未连接
+
+            </span>
+
+            <p>
+
+                ws://localhost:8765
+
+            </p>
+
+        </div>
+
+    </aside>
+
+    <!-- 右侧 -->
+
+    <main class="content">
+
+        <div class="maze">
+
+            <h2>Turtlesim 迷宫地图</h2>
+
+            <canvas id="mazeCanvas"
+                    width="900"
+                    height="620">
+            </canvas>
+
+        </div>
+
+        <div class="panel log">
+
+            <h2>系统日志</h2>
+
+            <div id="logs">
+
+                等待连接...
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
