@@ -7,7 +7,7 @@ ROS2 Turtlesim Web Bridge (方案B)
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from turtlesim.msg import Pose
+from turtlesim_msgs.msg import Pose
 import asyncio
 import websockets
 import json
